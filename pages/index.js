@@ -65,13 +65,13 @@ export default function Home() {
         isOpen={!!selectedProduct}
         onRequestClose={closeModal}
         style={{
-          content: { height: 300, width: 300, margin: 'auto' },
+          content: { height: 500, width: 300, margin: 'auto' },
           overlay: { backgroundColor: '#000000a8' }
         }}
       >
         <button onClick={closeModal}>Close</button>
         {selectedProduct && (
-          <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white h-56">
+          <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
             <div className="w-full" />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">
