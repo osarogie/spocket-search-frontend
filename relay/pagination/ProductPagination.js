@@ -37,8 +37,6 @@ export function createProductPagination(Component) {
     {
       direction: 'forward',
       getConnectionFromProps(props) {
-        console.log(props)
-
         return props.query && props.query.allProducts
       },
       getFragmentVariables(prevVars, totalCount) {

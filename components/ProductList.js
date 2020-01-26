@@ -96,7 +96,11 @@ export class ProductList extends React.Component {
       >
         <div className="flex flex-wrap -mx-2" id={this.elid}>
           {allProducts.edges.map(({ node }) => (
-            <RelayProductItem key={node.id} item={node} />
+            <RelayProductItem
+              onItemClick={this.props.onItemClick}
+              key={node.id}
+              item={node}
+            />
           ))}
         </div>
         {this.renderFooter()}
