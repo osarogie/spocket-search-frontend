@@ -42,6 +42,12 @@ export class ProductList extends React.Component {
     const { query } = this.props
     const allProducts = query.allProducts
 
+    if (this.state.isLoading) {
+      return (
+        <span className="relative mt-8 mb-12 table spinner mx-auto py-2 px-4"></span>
+      )
+    }
+
     if (allProducts.edges.length == 0) {
       return <div> No Products yet</div>
     }

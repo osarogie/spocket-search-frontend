@@ -18,7 +18,7 @@ export default function Home() {
   function renderResults({ error, props }) {
     if (error) return <div>Error!</div>
 
-    if (!props) return <div>Loading...</div>
+    if (!props) return <span className="spinner" />
 
     return <ProductPagination query={props} />
   }
